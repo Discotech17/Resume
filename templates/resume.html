@@ -1,0 +1,148 @@
+{% load static %}<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Resume</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/app.css' %}">
+        <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        div.col{
+            height: 750px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 75px;
+            padding: 70px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="row justify-content-center">
+            <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mainMenu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'Resume' %}">Resume</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'AboutMe' %}">About Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <section>
+            <div class="text-white">
+                <div class="container">
+                    <div class="text-center">
+                        <div class="card-header">
+                        I have attempted to split my resume into two sections, my military career section and my programming section.  If you have any questions, please feel free to reach out.
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">    
+                        <div class="col">
+                            <ul><b>Military Career</b>
+                                <ul><li><b>Written Communication</b></li>
+                                    <ul><li>Concise in relaying pertinent information to aviators performing flight duties through email.</li></ul>
+                                    <ul><li>Prepared written procedures for coworkers to follow for effective accomplishment.</li></ul>
+                                </ul>
+                                <ul><li><b>Oral Communication</b></li>
+                                    <ul><li>Thoroughly provides training/instruction to address changes for yearly requirements and trends identified during evaluations/inspections</li></ul>
+                                    <ul><li>Easily established rapport and engages with manage, peers, and clients.</li></ul>
+                                </ul>
+                                <ul><li><b>Computer</b></li>
+                                    <ul><li>Demonstrated proficiency working with typical computer software programs. (Word, Excel, Powerpoint, Email)</li></ul>
+                                    <ul><li>Proficient in technicaly software, such as Oracle and Jaspersoft, used to query aircrew training requirements, operational flights, etc.</li></ul>
+                                </ul>
+                                <ul><li><b>Accomplishments</b></li>
+                                    <ul><li>Associates Degree in Aircraft Maintenance Technologies, Community College of the Air Force, Apr 2020</li></ul>
+                                    <ul><li>Airman Leadership School, Offutt Air Force Base, Sep 2015</li></ul>
+                                    <ul><li>Awarded Good Conduct Medal (x2), exceptional military conduct in professional environment</li></ul>
+                                    <ul><li>Awarded Air Force Achievement Medal for technical proficiency between two positions, 2017</li></ul>
+                                    <ul><li>Awarded Air Force Commendation Medal for meritorious service while lisasing between 12 units, across 3 continents to enable operational and training execution for 2,083 personnel.</li></ul>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul></li><b>Programming</li></b>
+                                <ul><b>Building this website</b>
+                                    <ul><li>Completed <a href="https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/"> "A Complete Beginner's Guide to Django"</a> tutorial.</li></ul>
+                                    <ul><li>Complex problem-solving through research and thorough reviews.</li></ul>
+                                    <ul><li>Learned how to link a url in the middle of a unordered list.</li></ul>
+                                    <ul><li>Learned NGINX, PostgreSQL, Supervisor, Gunicorn.</li></ul>
+                                    <ul><li>Learned how to use the Terminal to navigate/operate virtual environment to deploy website.</li></ul>
+                                    <ul><li>Learned to use HTML to create a basic forum website.</li></ul>
+                                    <ul><li>Turned what I learned into this website.</li></ul>
+                                    <ul><li>Learned use URL's to navigate a webpage.</li></ul>
+                                </ul>
+                                <ul><b>GitHub Projects</b>
+                                    <ul><li><i>Python</i></li>
+                                        <ul><li>Calculator</li>
+                                            <ul><li>Learned simple while True statement with if statement for deciding what operation to perform with numbers that were input.</li></ul>
+                                        </ul>
+                                        <ul><li>Hangman</li>
+                                            <ul><li>Learned how to create a list, limit turns, select input and remove turn if incorrect, and prin the character if correct while maintaining the word length.</li></ul>
+                                        </ul>
+                                        <ul><li>Tic Tac Toe</li>
+                                            <ul><li>Learned how to create a terminal board, randomize who starts, how to numerize the boards, print the board after each turn, get a computer and player move through if statement, and restart a game.</li></ul>
+                                        </ul>
+                                        <ul><li>School Projects</li>
+                                            <ul><li>Learned</li></ul>
+                                        </ul>
+                                    </ul>
+                                    <ul><li><i>C#</i></li>
+                                        <ul><li>Basic Adventure/RPG Game</li>
+                                            <ul><li>Learned how to create a simple payroll calculator with input for hours worked, the rate of pay with a return of gross pay.</li></ul>
+                                            <ul><li>Learned how to create a while loop to continue calculating gross pay.</li></ul>
+                                            <ul><li>Learned how to create a MPG calculator using the name of the vehicle, miles driven, and gas used.</li></ul>
+                                            <ul><li>Learned how to create a while loop to continue calculating MPG.</li></ul>
+                                            <ul><li>Learned how to create a month list and enumerate the list to print "January is month 1."</li></ul>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                                <ul><li><b>Pursuing my B.S. in Computer Technology with a concentration in Cloud Computing</b></li>
+                                    <ul><li>Completed all of my General Education Requirements (30 Semester Hours)</li></ul>
+                                    <ul><li>Will be swapping to the B.S. Computer Technology Jan 2021 where I will need 84 Semester Hours*estimation.</li></ul>
+                                    <ul><li>Plan to complete B.S. by Jan 2023.</li></ul>
+                                    <ul><li>Plan to pursue M.S. in Computer Science or M.B.A.</li></ul>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </section>                
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <footer>
+            <div class="row justify-content-center">
+                <a href="https://www.linkedin.com/in/matt-descoteaux-896522131/">
+                    <img src="/static/img/linkedin.png" alt="LinkedIn" style="width:50px;height:50px;">
+                <a href="https://github.com/Discotech17">
+                    <img src="/static/img/github.png" alt="GitHub" style="width:50px;height:50px;">
+                <a href="mailto:matt.descoteaux@outlook.com">
+                    <img src="/static/img/email.png" alt="Email" style="width:50px;height:50px;">
+            </div>
+            <div class="row float-right">
+                <a href='https://pngtree.com/so/letter-clipart'>pngtree.com</a>
+            </div>
+        </footer>
+    </body>
+</html>
