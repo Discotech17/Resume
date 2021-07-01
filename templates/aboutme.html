@@ -27,20 +27,17 @@
             <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
             <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
                 <div class="container">
-                    <a class="navbar-brand" href="{% url 'home' %}">Home</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="mainMenu">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'Resume' %}">Resume</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'AboutMe' %}">About Me</a>
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link" href="{% url 'Resume' %}">Resume</a>
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="navbar-brand" href="{% url 'AboutMe' %}">About Me<span class="sr-only">(current)</span></a>
                             </li>
                         </ul>
-                    </div>
                 </div>
             </nav>
         </div>
@@ -51,7 +48,8 @@
                         <div class="text-white">
                             <p>Hello!  I included this snippet about me to give a better personal connection.</p>
                             <p>I joined the Air Force in 2013 in hopes to pursue a career in Pararescue(think combat medic on steroids).  I was unable to get the job due to color blindness and received Aviation Resource Manager instead.  My first base was Offutt AFB, NE where I worked with Airborne Linguists.  I enjoyed my time there and learned how to navigate the Air Force as a young Airman.  I exceled at my craft and was able to deploy twice out of Nebraska.  My first deployment is where my programming adventure starts.</p>
-                            <p>In 2015, during my first deployment, I started dabling with Python.  </p>
+                            <p>In 2015, during my first deployment, I started dabling with Python.  At the time, I was unable to grasp the basic concepts to put even the simplest strings together.  A couple other attempts at learning to program with nothing greater than failures, I gave up.  Fast forward to Jan 2021, I decided to do a Udemy course for C#, and couldn't understand what I was attempting through the course.  I stumbled across a Youtube vide about reprogramming your mind to think more like a programmer.   All of a sudden, programming made a lot more sense.</p>
+                            <p>I started with learning C# for the MTA 98-361 Software Development Fundamentals so I could attend Microsofts Software and Systems Academy.  By the time I was ready to test, the course was full.  So I followed some tutorials on Youtube, along with <a href="https://inventwithpython.com/">//inventwithpython.com/</a> tutorials.  Being able to perform the actions and read a description of what they were doing, helped me develop a basic understanding along with some of my C# studying.</p>
                         </div>
                     </div>
                 </div>
