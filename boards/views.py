@@ -14,7 +14,7 @@ def AboutMe(request):
 def Resume(request):
     return render(request, 'resume.html')
 
-def Todo(request):
+def index(request):
     todos = TodoList.objects.all()
     categories = Category.objects.all()
     if request.method == "POST":
