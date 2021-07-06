@@ -25,7 +25,7 @@ def todo(request):
             content = title + " -- " + date + " " + category
             Todo = TodoList(title=title, content=content, due_date=date, category=Category.objects.get(name=category))
             Todo.save()
-            return render(request, 'todo.html', {"todos": todos, "categories": categories})
+            return redirect(request, 'todo.html', {"todos": todos, "categories": categories})
 
         if "taskDelete" in request.POST:
             checkedlist = request.POST["checkedbox"]
