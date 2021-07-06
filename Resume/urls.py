@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^aboutme/$', views.AboutMe, name='AboutMe'),
     url(r'^resume/$', views.Resume, name='Resume'),
-    url(r'^todo/$', views.Todo, name='Todo'),
+    url(r'^todo/$', views.Todo, name='TodoApp'),
 ]
