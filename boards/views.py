@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from .models import TodoList, Category
+import datetime
 
 # Create your views here.
 
@@ -12,3 +14,29 @@ def AboutMe(request):
 def Resume(request):
     return render(request, 'resume.html')
 
+def todo(request):
+    todos = TodoList.objects.all()
+    categories = Category.objects.all()
+    if request.method == "POST":
+        if "taskAdd" in request.POST:
+            title = request.POST["description"]
+            date = str(request.POST["date"])
+            category = request.POST["category_select"]
+            content = title + " -- " + date + " " + category
+            Todo = TodoList(title=title, content=content, due_date=date, category=Category.objects.get(name=category))
+            Todo.save()
+            return render(request, "todo.html", {"todos": todos, "categories": categories})
+
+        if "taskDelete" in request.POST:
+            checkedlist = request.POST["checkedbox"]
+            for todo_id in checkedlist:
+                todo = TodoList.objects.get(id=int(todo_id))
+                todo.delete()
+
+        if "taskComplete" in request.POST:
+            checkedlist = request.POST["checkedbox"]
+            for todo_id in checkedlist:
+                todo = TodoList.objects.get(id=int(todo_id))
+                
+                
+    return render(request, "todo.html", {"todos": todos, "categories": categories})
