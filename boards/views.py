@@ -38,4 +38,4 @@ def todo(request):
             for todo_id in checkedlist:
                 todo = TodoList.objects.get(id=int(todo_id)) 
                 
-    return render(request, ''todo.html', {"todos": todos, "categories": categories})
+    return render(request, 'todo.html', {"todos": todos, "categories": categories})
