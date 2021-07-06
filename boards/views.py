@@ -25,7 +25,7 @@ def todo(request):
             content = title + " -- " + date + " " + category
             Todo = TodoList(title=title, content=content, due_date=date, category=Category.objects.get(name=category))
             Todo.save()
-            return render(request, "todo.html", {"todos": todos, "categories": categories})
+            return render(request, 'todo.html', {"todos": todos, "categories": categories})
 
         if "taskDelete" in request.POST:
             checkedlist = request.POST["checkedbox"]
@@ -36,7 +36,6 @@ def todo(request):
         if "taskComplete" in request.POST:
             checkedlist = request.POST["checkedbox"]
             for todo_id in checkedlist:
-                todo = TodoList.objects.get(id=int(todo_id))
+                todo = TodoList.objects.get(id=int(todo_id)) 
                 
-                
-    return render(request, "todo.html", {"todos": todos, "categories": categories})
+    return render(request, ''todo.html', {"todos": todos, "categories": categories})
