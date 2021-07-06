@@ -14,28 +14,28 @@ def AboutMe(request):
 def Resume(request):
     return render(request, 'resume.html')
 
-#def Todo(request):
-#    todos = TodoList.objects.all()
-#    categories = Category.objects.all()
-#    if request.method == "POST":
-#        if "taskAdd" in request.POST:
-#            title = request.POST["description"]
-#            date = str(request.POST["date"])
-#            category = request.POST["category_select"]
-#            content = title + " -- " + date + " " + category
-#            Todo = TodoList(title=title, content=content, due_date=date, category=Category.objects.get(name=category))
-#            Todo.save()
-#            return redirect(request, 'todo.html', {"todos": todos, "categories": categories})
+def Todo(request):
+    todos = TodoList.objects.all()
+    categories = Category.objects.all()
+    if request.method == "POST":
+        if "taskAdd" in request.POST:
+            title = request.POST["description"]
+            date = str(request.POST["date"])
+            category = request.POST["category_select"]
+            content = title + " -- " + date + " " + category
+            Todo = TodoList(title=title, content=content, due_date=date, category=Category.objects.get(name=category))
+            Todo.save()
+            return redirect(request, 'todo.html', {"todos": todos, "categories": categories})
 
-#        if "taskDelete" in request.POST:
-#            checkedlist = request.POST["checkedbox"]
-#            for todo_id in checkedlist:
-#                todo = TodoList.objects.get(id=int(todo_id))
-#                todo.delete()
+        if "taskDelete" in request.POST:
+            checkedlist = request.POST["checkedbox"]
+            for todo_id in checkedlist:
+                todo = TodoList.objects.get(id=int(todo_id))
+                todo.delete()
 
-#        if "taskComplete" in request.POST:
-#            checkedlist = request.POST["checkedbox"]
-#            for todo_id in checkedlist:
-#                todo = TodoList.objects.get(id=int(todo_id)) 
+        if "taskComplete" in request.POST:
+            checkedlist = request.POST["checkedbox"]
+            for todo_id in checkedlist:
+                todo = TodoList.objects.get(id=int(todo_id)) 
                 
-#    return render(request, 'todo.html', {"todos": todos, "categories": categories})
+    return render(request, 'todo.html', {"todos": todos, "categories": categories})
