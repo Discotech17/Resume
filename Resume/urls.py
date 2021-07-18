@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^aboutme/$', views.AboutMe, name='AboutMe'),
     url(r'^resume/$', views.Resume, name='Resume'),
-    url(r'^todo/$', views.index, name='TodoApp'),
+    #url(r'^todo/$', views.index, name='TodoApp'),
+    path(r'^todo/$', views.index, name='TodoApp'),
 ]
