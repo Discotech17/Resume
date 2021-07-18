@@ -8,13 +8,13 @@ import datetime
 # Create your views here.
 
 def home(request):
-    return render(request, 'todo.html')
+    return render(request, 'home.html')
 
 def AboutMe(request):
-    return render(request, 'bear.html')
+    return render(request, 'aboutme.html')
 
 def Resume(request):
-    return render(request, 'todo.html')
+    return render(request, 'resume.html')
 
 def index(request):
     todos = TodoList.objects.all()
