@@ -8,7 +8,7 @@ import datetime
 # Create your views here.
 
 def home(request):
-    return render(request, 'bear.html')
+    return render(request, 'todo.html')
 
 def AboutMe(request):
     return render(request, 'aboutme.html')
