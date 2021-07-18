@@ -16,7 +16,7 @@ def AboutMe(request):
 def Resume(request):
     return render(request, 'resume.html')
 
-def index(request):
+def Todo(request):
     todos = TodoList.objects.all() #quering all todos with the object manager
     categories = Category.objects.all() #getting all categories with object manager
     if request.method == "POST": #checking if the request method is a POST

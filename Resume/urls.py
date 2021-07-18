@@ -20,7 +20,7 @@ from boards import views
 app_name = 'Resume'
 
 urlpatterns = [
-    url(r'^todo/$', views.index, name='TodoApp'),
+    url(r'^todo/$', views.Todo, name='TodoApp'),
     url(r'^$', views.home, name='home'),
     url(r'^aboutme/$', views.AboutMe, name='AboutMe'),
     url(r'^resume/$', views.Resume, name='Resume'),
