@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from boards import views
 
+app_name = 'Resume'
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
     url(r'^aboutme/$', views.AboutMe, name='AboutMe'),
     url(r'^resume/$', views.Resume, name='Resume'),
-    #url(r'^todo/$', views.home, name='TodoApp'),
-    path(r'^todo/$', views.home, name='TodoApp'),
+    url(r'^todo/$', views.index, name='TodoApp'),
 ]
