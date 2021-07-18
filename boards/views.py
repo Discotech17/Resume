@@ -11,10 +11,10 @@ def home(request):
     return render(request, 'todo.html')
 
 def AboutMe(request):
-    return render(request, 'aboutme.html')
+    return render(request, 'todo.html')
 
 def Resume(request):
-    return render(request, 'resume.html')
+    return render(request, 'todo.html')
 
 def index(request):
     todos = TodoList.objects.all()
