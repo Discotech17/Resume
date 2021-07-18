@@ -11,7 +11,7 @@ def home(request):
     return render(request, 'todo.html')
 
 def AboutMe(request):
-    return render(request, 'todo.html')
+    return render(request, 'bear.html')
 
 def Resume(request):
     return render(request, 'todo.html')
